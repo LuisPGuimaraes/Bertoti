@@ -1,8 +1,10 @@
+import java.util.date;
 public class Entities {
 
     public class Funcionario() {
-        double incricao;
 
+        double incricao;
+        Date x = new Date ();
         public Funcionario (inscricao) {
             this.inscricao = inscricao;
         }
@@ -31,9 +33,13 @@ public class Entities {
             this.Socio.plano = Socio.plano;
         }
     }
-        public boolean(){
-        if (inscricao)
-        }
+        public boolean status(){
+            if (validade > x){
+                return True;}
+            else{
+                return False;
+            }
+
 
     public static class Socio(){
         public String nome;
