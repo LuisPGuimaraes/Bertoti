@@ -5,9 +5,10 @@ public class Entities {
 
         double incricao;
         Date x = new Date ();
-        public Funcionario (inscricao) {
+        public Funcionario () {
             this.inscricao = inscricao;
         }
+        private double inscricao;
 
         public String getNome() {
             return Socio.nome;
@@ -33,23 +34,62 @@ public class Entities {
             this.Socio.plano = Socio.plano;
         }
     }
-        public boolean status(){
-            if (validade > x){
-                return True;}
-            else{
-                return False;
+        public boolean comparar (date validade, date dataHoje){
+            if (validade>dataHoje)
             }
 
 
-    public static class Socio(){
+    public class Socio(){
         public String nome;
         public date validade;
         public String plano;
         public String dataHoje;
+
+        public Socio(String nome, date validade, String plano, String dataHoje) {
+            this.nome = nome;
+            this.validade = validade;
+            this.plano = plano;
+            this.dataHoje = dataHoje;
+        }
+
+        public String getNome() {
+            return nome;
+        }
+
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+
+        public date getValidade() {
+            return validade;
+        }
+
+        public void setValidade(date validade) {
+            this.validade = validade;
+        }
+
+        public String getPlano() {
+            return plano;
+        }
+
+        public void setPlano(String plano) {
+            this.plano = plano;
+        }
+
+        public date getDataHoje() {
+            return dataHoje;
+        }
+
+        public void setDataHoje(date dataHoje) {
+            this.dataHoje = dataHoje;
+        }
     }
 
     public class Clube(){
         private list <Socio> ();
+
+        public Clube() {
+        }
 
         private boolean socio_entrada(Socio){
             if (Socio.validade > date){
