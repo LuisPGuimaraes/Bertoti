@@ -7,6 +7,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-aaaa");
 
+        Socio socio1 = new Socio("Fernando",new SimpleDateFormat("12-12-2023"),"Basico", 0001);
+
 
         System.out.print("Digite seu nome: ");
         String nome_func = sc.nextLine();
@@ -17,11 +19,17 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println("O que deseja fazer?");
-        System.out.println("1. Buscar Sócio");
+        System.out.println("1. Cadastro Novo Sócio");
         System.out.println("0. Sair");
+        int registrador = sc.nextInt();
+        if (registrador == 0){
+            System.out.println("Até mais!!!");
+        }
+        elif (registrador == 1){
+            System.out.println();
+        }
 
-        Socio socio = new Socio(Socio.nome,Socio.validade,Socio.plano,Socio.    inscricao);
-        Socio socio1 = new Socio("Fernando","12-12-2023","Basico");
+
 
     }
 }

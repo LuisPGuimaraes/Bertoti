@@ -1,12 +1,16 @@
-import java.util.Date;
+import java.text.SimpleDateFormat;
+
 
 public class Socio {
-    public static String nome;
-    public static Date validade;
-    public static String plano;
+    public String nome;
+    public SimpleDateFormat validade;
+    public String plano;
     private Integer inscricao;
 
-    public Socio(Integer inscricao) {
+    public Socio(String nome, SimpleDateFormat validade, String plano, Integer inscricao) {
+        this.nome = nome;
+        this.validade = validade;
+        this.plano = plano;
         this.inscricao = inscricao;
     }
 
@@ -18,10 +22,10 @@ public class Socio {
         this.inscricao = inscricao;
     }
 
-    public Socio(String nome, Date validade, String plano) {
-        Socio.nome = nome;
-        Socio.validade = validade;
-        Socio.plano = plano;
+    public Socio(String nome, SimpleDateFormat validade, String plano) {
+        this.nome = nome;
+        this.validade = validade;
+        this.plano = plano;
     }
 
     public String getNome() {
@@ -29,15 +33,15 @@ public class Socio {
     }
 
     public void setNome(String nome) {
-        Socio.nome = nome;
+        this.nome = nome;
     }
 
-    public Date getValidade() {
+    public SimpleDateFormat getValidade() {
         return validade;
     }
 
-    public void setValidade(Date validade) {
-        Socio.validade = validade;
+    public void setValidade(SimpleDateFormat validade) {
+        this.validade = validade;
     }
 
     public String getPlano() {
@@ -45,6 +49,6 @@ public class Socio {
     }
 
     public void setPlano(String plano) {
-        Socio.plano = plano;
+        this.plano = plano;
     }
 }
