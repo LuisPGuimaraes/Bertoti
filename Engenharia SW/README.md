@@ -12,8 +12,9 @@ Referência:
 # Exercício 2
 Exemplos de trade-offs:
 - Softwares utilizados em aeronaves - usabilidade x segurança;
-- 
-- 
+- Loja de aplicativo Apple - limitação x segurança
+-   
+
 
 # Exercício 3
 Aula 3 - 18/08
