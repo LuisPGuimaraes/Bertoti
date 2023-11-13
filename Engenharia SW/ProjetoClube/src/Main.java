@@ -28,7 +28,7 @@ public class Main {
         while (true) {
             System.out.println("O que deseja fazer?");
             System.out.println("1. Cadastro Novo Sócio");
-            System.out.println("2. Consultar Sócio");
+            System.out.println("2. Acessos do Sócio");
             System.out.println("0. Sair");
             int registrador = sc.nextInt();
             if (registrador == 1) {
