@@ -94,7 +94,52 @@ public class Main {
                                 }
                             }
                         }
+                        if (Objects.equals(numerosocio.getPlano(), "SILVER")) {
+                            System.out.println("_____PLANO SILVER_____");
+                            System.out.println("Acessos:");
+                            System.out.println("1. Quadra poliesportiva");
+                            System.out.println("2. Piscina");
+                            System.out.println("0. Voltar");
+                            System.out.println();
+                            System.out.println("Insira qual acesso deseja: ");
+
+                            while (true) {
+                                int registrador2 = sc.nextInt();
+                                if (registrador2==1){
+                                    System.out.println("_____Acesso liberado_____");
+                                    System.out.println();
+                                    System.out.println("_____QUADRA_____");
+                                }
+                                else if (registrador2==2) {
+                                    System.out.println("_____Acesso liberado_____");
+                                    System.out.println();
+                                    System.out.println("_____PISCINA_____");
+                                }
+                                if (registrador2==0) {
+                                    break;
+                                }
+                            }
+                        }
+                        if (Objects.equals(numerosocio.getPlano(), "BRONZE")) {
+                            System.out.println("_____PLANO BRONZE_____");
+                            System.out.println("Acessos:");
+                            System.out.println("1. Quadra poliesportiva");
+                            System.out.println("0. Voltar");
+                            System.out.println();
+                            System.out.println("Insira qual acesso deseja: ");
+
+                            while (true) {
+                                int registrador2 = sc.nextInt();
+                                if (registrador2==1){
+                                    System.out.println("_____Acesso liberado_____");
+                                    System.out.println();
+                                    System.out.println("_____QUADRA_____");
+                                }
+                                if (registrador2==0) {
+                                    break;
+                                }
                     }
+
                 }}
             else if (registrador == 3) {
                 System.out.println("teste");
@@ -111,4 +156,4 @@ public class Main {
 
 
 
-    }}
+    }}}}
