@@ -34,20 +34,19 @@ public class Main {
             System.out.println("Digite o nome do sócio:");
             entrada_socio = sc.next();
             System.out.println("Digite o plano:");
-            entrada_plano = sc.next();
+            entrada_plano = sc.next().toUpperCase();
             System.out.println("Digite o número de inscrição:");
             entrada_inscricao = sc.nextInt();
+            System.out.println();
 
-            if (socio3 == false){
-                
+            Socio numerosocio = new Socio(entrada_socio, new SimpleDateFormat("01-01-2024"), entrada_plano,entrada_inscricao);
+            System.out.println("Novo usuário cadastrado:");
+            System.out.println("Número de inscrição: " + numerosocio.getInscricao());
+            System.out.println("Nome: " + numerosocio.getNome());
+            System.out.println("Plano: " + numerosocio.getPlano());
+            System.out.println("Validade: " + numerosocio.getValidade());
             }
-
-            Socio
-            //dados_socio = "1" + entrada_socio + "2" + entrada_plano + "3" + entrada_inscricao;
-            //clube.adicionarSocio(dados_socio);
-
-            //System.out.println(clube.getListaSocios());
-           // System.out.println("_____Plano Gold_____");
+            
 
 
 
@@ -58,4 +57,3 @@ public class Main {
 
 
     }
-}
