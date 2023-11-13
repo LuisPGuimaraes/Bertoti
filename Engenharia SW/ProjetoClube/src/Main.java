@@ -1,4 +1,5 @@
 import java.text.SimpleDateFormat;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -27,6 +28,7 @@ public class Main {
         while (true) {
             System.out.println("O que deseja fazer?");
             System.out.println("1. Cadastro Novo Sócio");
+            System.out.println("2. Consultar Sócio");
             System.out.println("0. Sair");
             int registrador = sc.nextInt();
             if (registrador == 1) {
@@ -38,17 +40,38 @@ public class Main {
                 entrada_inscricao = sc.nextInt();
 
                 Socio numerosocio = new Socio(entrada_socio, new SimpleDateFormat("01-01-2024"), entrada_plano, entrada_inscricao);
+                clube.adicionarSocio(numerosocio);
                 System.out.println("Novo usuário cadastrado:");
                 System.out.println("Número de inscrição: " + numerosocio.getInscricao());
                 System.out.println("Nome: " + numerosocio.getNome());
                 System.out.println("Plano: " + numerosocio.getPlano());
                 System.out.println("Validade: " + numerosocio.getValidade());
+            } else if (registrador == 2) {
+                System.out.println("_____Consultar Sócio_____");
+                System.out.println();
+                System.out.println("Digite o número de inscrição: ");
+                String selecionar_inscricao = sc.next();
+                for (Socio numerosocio : clube.getListaSocios()){
+                    if (Objects.equals(numerosocio.getInscricao(), selecionar_inscricao)) {
+                        System.out.println(numerosocio);
+                        break;}
+                }
+
+
+                //System.out.println("Número de inscrição: " + numerosocio.getInscricao());
+                //System.out.println("Nome: " + numerosocio.getNome());
+                //System.out.println("Plano: " + numerosocio.getPlano());
+                //System.out.println("Validade: " + numerosocio.getValidade());
             }
-            else if (registrador ==0){
+            else if (registrador == 3) {
+                System.out.println("teste");
+                System.out.println(clube.getListaSocios());
+            }
+                else if (registrador == 0) {
+                System.out.println("Até mais!!!");
                 break;
             }
-        }
-        System.out.println("Até mais!!!");
 
-    }
-}
+
+
+        }}}

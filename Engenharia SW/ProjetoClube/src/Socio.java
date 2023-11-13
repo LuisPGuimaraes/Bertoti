@@ -5,21 +5,21 @@ public class Socio {
     public String nome;
     public SimpleDateFormat validade;
     public String plano;
-    private Integer inscricao;
+    private String inscricao;
 
     public Socio(String nome, SimpleDateFormat validade, String plano, Integer inscricao) {
         this.nome = nome;
         this.validade = validade;
         this.plano = plano;
-        this.inscricao = inscricao;
+        this.inscricao = String.valueOf(inscricao);
     }
 
-    public Integer getInscricao() {
+    public String getInscricao() {
         return inscricao;
     }
 
     public void setInscricao(Integer inscricao) {
-        this.inscricao = inscricao;
+        this.inscricao = String.valueOf(inscricao);
     }
 
     public Socio(String nome, SimpleDateFormat validade, String plano) {

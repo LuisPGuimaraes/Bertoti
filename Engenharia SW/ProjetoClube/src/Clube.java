@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Clube {
 
-    private List<String> listaSocios; // Lista de sócios do clube
+    private List<Socio> listaSocios; // Lista de sócios do clube
 
     // Construtor para inicializar a lista de sócios
     public Clube() {
@@ -11,17 +11,17 @@ public class Clube {
     }
 
     // Método para obter a lista de sócios
-    public List<String> getListaSocios() {
+    public List<Socio> getListaSocios() {
         return listaSocios;
     }
 
     // Método para definir a lista de sócios
-    public void setListaSocios(List<String> listaSocios) {
+    public void setListaSocios(List<Socio> listaSocios) {
         this.listaSocios = listaSocios;
     }
 
     // Método para adicionar um novo sócio à lista
-    public void adicionarSocio(String novoSocio) {
-        listaSocios.add(novoSocio); // Adiciona o novo sócio à lista de sócios
+    public void adicionarSocio(Socio numerosocio) {
+        listaSocios.add(numerosocio); // Adiciona o novo sócio à lista de sócios
     }
 }
