@@ -10,59 +10,59 @@ Referência:
   A engenharia de software dedica-se a explorar recursos que viabilizem a criação do software da forma mais eficaz. A programação representa uma boa parte, entretanto, a diferenciação se da a incorporação do tempo, a escalabilidade e os trade-offs.
 
 # Exercício 2
-Exemplos de trade-offs:
-- Softwares utilizados em aeronaves - usabilidade x segurança;
-- Loja de aplicativo Apple - limitação x segurança
-- Site do governo (GOV) - dificuldade x segurança
+Exemplos de trade-offs:<br>
+- Softwares utilizados em aeronaves - usabilidade x segurança; <br>
+- Loja de aplicativo Apple - limitação x segurança<br>
+- Site do governo (GOV) - dificuldade x segurança<br>
 
 
 # Exercício 3
 Aula 3 - 18/08
 Comparativo entre plataformas - Requisitos não funcionais:
 
-10 Usability Heuristics for User Interface Design 
+10 Usability Heuristics for User Interface Design <br>
 Link: https://www.nngroup.com/articles/ten-usability-heuristics/
 
-Visibility of system status 
-Erro: Atualização do Macos
-Acerto: Instalação de programas 
+Visibility of system status <br>
+Erro: Atualização do Macos<br>
+Acerto: Instalação de programas <br>
 
-Match between system and the real world
-Erro: Seção de dispositivos conectados no computador
-Acerto: Símobolo da lixeira semelhante ao de descarte da vida real
+Match between system and the real world <br>
+Erro: Seção de dispositivos conectados no computador <br>
+Acerto: Símobolo da lixeira semelhante ao de descarte da vida real <br>
 
-User control and freedom
-Erro: Aplicativo de bancos
-Acerto: Aplicativo de fotos
+User control and freedom<br>
+Erro: Aplicativo de bancos<br>
+Acerto: Aplicativo de fotos<br>
 
-Consistency and standards
-Erro: Sistema de configuração de um celular 
+Consistency and standards<br>
+Erro: Sistema de configuração de um celular <br>
 
-Acerto: Utilização de ícones condizentes com o programa
+Acerto: Utilização de ícones condizentes com o programa <br>
 
-Error prevention
-Erro: Erro no cadastro do SIGAA
-Acerto: Dicas de como colocar a data de nascimento (DD/MM/AAAA)
+Error prevention<br>
+Erro: Erro no cadastro do SIGAA<br>
+Acerto: Dicas de como colocar a data de nascimento (DD/MM/AAAA)<br>
 
-Recognition rather than recall
-Erro: Pedir para que o usuário decore o protocolo quando o atendimento é iniciado 
-Acerto: Demonstrar a data do dia já na tela 
+Recognition rather than recall<br>
+Erro: Pedir para que o usuário decore o protocolo quando o atendimento é iniciado <br>
+Acerto: Demonstrar a data do dia já na tela <br>
 
-Flexibility and efficiency of use
-Erro: Finder do Macos, dificuldade de encontrar pastas
-Acerto: Passo a passo de utilização do Windows
+Flexibility and efficiency of use<br>
+Erro: Finder do Macos, dificuldade de encontrar pastas<br>
+Acerto: Passo a passo de utilização do Windows<br>
 
-Aesthetic and minimalist design
-Erro: Site da Americanas    
-Acerto: Site da Amazon 
+Aesthetic and minimalist design<br>
+Erro: Site da Americanas    <br>
+Acerto: Site da Amazon <br>
 
-Help users recognize, diagnose, and recover from errors
-Erro: Código de erro do Windows
-Acerto: Erro de cadastro no Linkedin
+Help users recognize, diagnose, and recover from errors<br>
+Erro: Código de erro do Windows<br>
+Acerto: Erro de cadastro no Linkedi<br>n
 
-Help and documentation
-Erro: Sistema de rematrícula SIGAA
-Acerto: Falta de alguma sintaxe no Visual Studio Code
+Help and documentation<br>
+Erro: Sistema de rematrícula SIGAA<br>
+Acerto: Falta de alguma sintaxe no Visual Studio Code<br>
 
 
 # Exercício 4
