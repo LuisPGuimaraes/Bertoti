@@ -78,3 +78,8 @@ Diagrama de caso de uso
 
 
 <img src="/Engenharia_SW/Image/Diagrama_de_classe2.0.png" alt="Versão 2">
+
+
+#Exercício 6
+Código java - ProjetoClube
+[Local do código](https://github.com/LuisPGuimaraes/Bertoti/tree/main/Engenharia_SW/ProjetoClube)
