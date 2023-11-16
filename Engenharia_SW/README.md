@@ -66,6 +66,8 @@ Acerto: Erro de cadastro no Linkedin<br>
 Erro: Sistema de rematrícula SIGAA<br>
 Acerto: Falta de alguma sintaxe no Visual Studio Code<br>
 
+[Exemplos das Heuristicas](https://github.com/LuisPGuimaraes/Bertoti/blob/c951430c8baa1e275b90c50a38c680bd7aa96be2/Engenharia_SW/Heuristicas)
+
 
 # Exercício 4
 Diagrama caso de uso
@@ -85,3 +87,8 @@ Diagrama de caso de uso
 #Exercício 6
 Código java - ProjetoClube
 [Local do código](https://github.com/LuisPGuimaraes/Bertoti/tree/main/Engenharia_SW/ProjetoClube)
+
+
+#Exerccício 7
+Teste Junit
+

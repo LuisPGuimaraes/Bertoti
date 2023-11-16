@@ -14,6 +14,10 @@ public class Socio {
         this.inscricao = String.valueOf(inscricao);
     }
 
+    public Socio() {
+
+    }
+
     public String getInscricao() {
         return inscricao;
     }
