@@ -11,9 +11,12 @@ Referência:
 
 # Exercício 2
 Exemplos de trade-offs:<br>
-- Softwares utilizados em aeronaves - usabilidade x segurança; <br>
+- Softwares utilizados em aeronaves - usabilidade x segurança;
+    Em um software de aeronave é necessário não haja erro pois pode ser fatal, então é limitado a usuabilidade engessando todo o sistema<br>
 - Loja de aplicativo Apple - limitação x segurança<br>
+    A loja possui uma limitada opção pois são todos verificados contra possíveis fraudes, assim não há uma possibilidade de baixar qualquer coisa
 - Site do governo (GOV) - dificuldade x segurança<br>
+    O site do governo possui várias barreiras de segurança para evitar vazamento de dados
 
 
 # Exercício 3
@@ -23,44 +26,43 @@ Comparativo entre plataformas - Requisitos não funcionais:
 10 Usability Heuristics for User Interface Design <br>
 Link: https://www.nngroup.com/articles/ten-usability-heuristics/
 
-Visibility of system status <br>
+1.Visibility of system status <br>
 Erro: Atualização do Macos<br>
 Acerto: Instalação de programas <br>
 
-Match between system and the real world <br>
-Erro: Seção de dispositivos conectados no computador <br>
-Acerto: Símobolo da lixeira semelhante ao de descarte da vida real <br>
+2.Match between system and the real world <br>
+Erro: Barra de tarefas iphone <br>
+Acerto: Símbolo da lixeira semelhante ao de descarte da vida real <br>
 
-User control and freedom<br>
+3.User control and freedom<br>
 Erro: Aplicativo de bancos<br>
 Acerto: Aplicativo de fotos<br>
 
-Consistency and standards<br>
+4.Consistency and standards<br>
 Erro: Sistema de configuração de um celular <br>
-
 Acerto: Utilização de ícones condizentes com o programa <br>
 
-Error prevention<br>
+5.Error prevention<br>
 Erro: Erro no cadastro do SIGAA<br>
 Acerto: Dicas de como colocar a data de nascimento (DD/MM/AAAA)<br>
 
-Recognition rather than recall<br>
+6.Recognition rather than recall<br>
 Erro: Pedir para que o usuário decore o protocolo quando o atendimento é iniciado <br>
 Acerto: Demonstrar a data do dia já na tela <br>
 
-Flexibility and efficiency of use<br>
+7.Flexibility and efficiency of use<br>
 Erro: Finder do Macos, dificuldade de encontrar pastas<br>
 Acerto: Passo a passo de utilização do Windows<br>
 
-Aesthetic and minimalist design<br>
+8.Aesthetic and minimalist design<br>
 Erro: Site da Americanas    <br>
 Acerto: Site da Amazon <br>
 
-Help users recognize, diagnose, and recover from errors<br>
+9.Help users recognize, diagnose, and recover from errors<br>
 Erro: Código de erro do Windows<br>
-Acerto: Erro de cadastro no Linkedi<br>n
+Acerto: Erro de cadastro no Linkedin<br>
 
-Help and documentation<br>
+10.Help and documentation<br>
 Erro: Sistema de rematrícula SIGAA<br>
 Acerto: Falta de alguma sintaxe no Visual Studio Code<br>
 
