@@ -72,7 +72,9 @@ Acerto: Falta de alguma sintaxe no Visual Studio Code<br>
 # Exercício 4
 Diagrama caso de uso
 
-<img src="/Engenharia_SW/Image/diagrama_caso_de_uso.png" alt="">
+<img src="/Engenharia_SW/Image/diagrama_caso_de_uso.png" alt="Versão 1">
+
+<img src="/Engenharia_SW/Image/CasoDeUso3.0.png" alt="Versão 2">
 
 
 # Exercício 5 
@@ -84,11 +86,12 @@ Diagrama de caso de uso
 <img src="/Engenharia_SW/Image/Diagrama_de_classe2.0.png" alt="Versão 2">
 
 
+<img src="/Engenharia_SW/Image/Diagrama_de_classe3.0.png" alt="Versão 3">
+
+
 #Exercício 6
 Código java - ProjetoClube
 [Local do código](https://github.com/LuisPGuimaraes/Bertoti/tree/main/Engenharia_SW/ProjetoClube)
 
 
-#Exerccício 7
-Teste Junit
 
