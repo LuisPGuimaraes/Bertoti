@@ -43,13 +43,13 @@ class RestApiDemoController {
     };
 
 	@PostMapping
-	CarBrand postBrand(@RequestBody CarBrand carBrands) {
-		carBrands.add(carBrands);
-		return carBrands;
+	CarBrand postBrand(@RequestBody CarBrand carBrand) {
+		this.carBrands.add(carBrand);
+		return carBrand;
 	}
 
 	@DeleteMapping("/{abbreviation}")
 	void deleteBrand(@PathVariable String abbreviation) {
-		carBrands.removeIf(c -> c.getAbbreviation().equals(abbreviation));
+		this.carBrands.removeIf(c -> c.getAbbreviation().equals(abbreviation));
 	}
 }
