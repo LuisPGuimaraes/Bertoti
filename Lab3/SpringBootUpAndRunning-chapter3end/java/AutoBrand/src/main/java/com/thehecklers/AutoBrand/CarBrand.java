@@ -36,9 +36,6 @@ public class CarBrand {
     public void setAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
     }
-    public Object getId() {
-        return null;
-    }
 
     public void add(CarBrand carBrands) {
     }

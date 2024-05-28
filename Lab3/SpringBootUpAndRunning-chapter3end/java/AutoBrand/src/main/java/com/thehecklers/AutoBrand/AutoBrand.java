@@ -41,7 +41,9 @@ class RestApiDemoController {
 	}
 
 	@GetMapping("/{id}")
-	Optional<CarBrand> getBrandById()
+	Optional<CarBrand> getBrandById(){
+        return null;
+    };
 
 	@PostMapping
 	CarBrand postBrand(@RequestBody CarBrand carBrands) {
@@ -49,9 +51,9 @@ class RestApiDemoController {
 		return carBrands;
 	}
 
-	@DeleteMapping("/{id}")
-	void deleteBrand(@PathVariable String id) {
-		carBrands.removeIf(c -> c.getId().equals(id));
+	@DeleteMapping("/{abbreviation}")
+	void deleteBrand(@PathVariable String abbreviation) {
+		carBrands.removeIf(c -> c.getAbbreviation().equals(abbreviation));
 	}
 }
 
