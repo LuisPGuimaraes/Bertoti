@@ -18,6 +18,7 @@ public class AutoBrand {
 
 @RestController
 @RequestMapping("/brands")
+@CrossOrigin("*")
 class RestApiDemoController {
 	private List<CarBrand> carBrands = new ArrayList<>();
 

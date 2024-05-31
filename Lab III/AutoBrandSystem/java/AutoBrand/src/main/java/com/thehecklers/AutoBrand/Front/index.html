@@ -9,68 +9,37 @@
 <body>
 <div class="container">
     <h1>Car Brands</h1>
-
-    <div class="form-container">
-        <h2>Add a Car Brand</h2>
-        <form id="addBrandForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="country">Country:</label>
-            <input type="text" id="country" name="country" required>
-
-            <label for="abbreviation">Abbreviation:</label>
-            <input type="text" id="abbreviation" name="abbreviation" required>
-
-            <button type="submit">Add Brand</button>
-        </form>
+    <div class="main-content">
+        <div class="buttons-container">
+            <div class="form-container">
+                <form id="brand-form" class="form-box">
+                    <h2>Add Brand</h2>
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="country" placeholder="Country" required>
+                    <input type="text" id="abbreviation" placeholder="Abbreviation" required>
+                    <button type="submit">Add Brand</button>
+                </form>
+            </div>
+            <div class="form-container">
+                <form id="delete-form" class="form-box">
+                    <h2>Delete Brand</h2>
+                    <input type="text" id="delete-abbreviation" placeholder="Abbreviation" required>
+                    <button type="submit">Delete Brand</button>
+                </form>
+            </div>
+            <div class="form-container">
+                <form id="edit-form" class="form-box">
+                    <h2>Edit Brand</h2>
+                    <input type="text" id="edit-abbreviation" placeholder="Abbreviation" required>
+                    <input type="text" id="edit-name" placeholder="New Name" required>
+                    <input type="text" id="edit-country" placeholder="New Country" required>
+                    <button type="submit">Edit Brand</button>
+                </form>
+            </div>
+        </div>
+        <div id="brand-list"></div>
     </div>
-
-    <div class="form-container">
-        <h2>Update a Car Brand</h2>
-        <form id="updateBrandForm">
-            <label for="updateAbbreviation">Abbreviation to Update:</label>
-            <input type="text" id="updateAbbreviation" name="updateAbbreviation" required>
-
-            <label for="updateName">New Name:</label>
-            <input type="text" id="updateName" name="updateName" required>
-
-            <label for="updateCountry">New Country:</label>
-            <input type="text" id="updateCountry" name="updateCountry" required>
-
-            <label for="updateNewAbbreviation">New Abbreviation:</label>
-            <input type="text" id="updateNewAbbreviation" name="updateNewAbbreviation" required>
-
-            <button type="submit">Update Brand</button>
-        </form>
-    </div>
-
-    <div class="form-container">
-        <h2>Delete a Car Brand</h2>
-        <form id="deleteBrandForm">
-            <label for="deleteAbbreviation">Abbreviation:</label>
-            <input type="text" id="deleteAbbreviation" name="deleteAbbreviation" required>
-
-            <button type="submit">Delete Brand</button>
-        </form>
-    </div>
-
-    <div class="form-container">
-        <h2>Get Brands by Abbreviation</h2>
-        <form id="getBrandForm">
-            <label for="getAbbreviation">Abbreviation:</label>
-            <input type="text" id="getAbbreviation" name="getAbbreviation" required>
-
-            <button type="submit">Get Brand</button>
-        </form>
-        <div id="brandResult"></div>
-    </div>
-
-    <h2>All Car Brands</h2>
-    <button id="loadBrandsBtn">Load All Brands</button>
-    <div id="allBrands"></div>
 </div>
-
 <script src="scripts.js"></script>
 </body>
 </html>

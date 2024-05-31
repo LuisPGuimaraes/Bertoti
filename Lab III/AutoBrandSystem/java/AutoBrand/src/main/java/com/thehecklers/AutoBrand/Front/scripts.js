@@ -1,110 +1,83 @@
+const baseUrl = 'http://localhost:8080/brands';
+
 document.addEventListener('DOMContentLoaded', () => {
-    const addBrandForm = document.getElementById('addBrandForm');
-    const updateBrandForm = document.getElementById('updateBrandForm');
-    const deleteBrandForm = document.getElementById('deleteBrandForm');
-    const getBrandForm = document.getElementById('getBrandForm');
-    const loadBrandsBtn = document.getElementById('loadBrandsBtn');
-    const allBrandsDiv = document.getElementById('allBrands');
-    const brandResultDiv = document.getElementById('brandResult');
+    fetchBrands();
 
-    const apiUrl = 'http://localhost:8080/brands';
+    const brandForm = document.getElementById('brand-form');
+    brandForm.addEventListener('submit', addBrand);
 
-    // Add Brand
-    addBrandForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const country = document.getElementById('country').value;
-        const abbreviation = document.getElementById('abbreviation').value;
+    const deleteForm = document.getElementById('delete-form');
+    deleteForm.addEventListener('submit', deleteBrand);
 
-        const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, country, abbreviation }),
-        });
-
-        if (response.ok) {
-            alert('Brand added successfully');
-            addBrandForm.reset();
-        } else {
-            alert('Error adding brand');
-        }
-    });
-
-    // Update Brand
-    updateBrandForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const abbreviation = document.getElementById('updateAbbreviation').value;
-        const name = document.getElementById('updateName').value;
-        const country = document.getElementById('updateCountry').value;
-        const newAbbreviation = document.getElementById('updateNewAbbreviation').value;
-
-        const response = await fetch(`${apiUrl}/${abbreviation}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, country, abbreviation: newAbbreviation }),
-        });
-
-        if (response.ok) {
-            alert('Brand updated successfully');
-            updateBrandForm.reset();
-        } else {
-            alert('Error updating brand');
-        }
-    });
-
-    // Delete Brand
-    deleteBrandForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const abbreviation = document.getElementById('deleteAbbreviation').value;
-
-        const response = await fetch(`${apiUrl}/${abbreviation}`, {
-            method: 'DELETE',
-        });
-
-        if (response.ok) {
-            alert('Brand deleted successfully');
-            deleteBrandForm.reset();
-        } else {
-            alert('Error deleting brand');
-        }
-    });
-
-    // Get Brand by Abbreviation
-    getBrandForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const abbreviation = document.getElementById('getAbbreviation').value;
-
-        const response = await fetch(`${apiUrl}/${abbreviation}`);
-        const brands = await response.json();
-
-        brandResultDiv.innerHTML = '';
-        if (brands.length > 0) {
-            brands.forEach(brand => {
-                const brandDiv = document.createElement('div');
-                brandDiv.className = 'brand';
-                brandDiv.textContent = `Name: ${brand.name}, Country: ${brand.country}, Abbreviation: ${brand.abbreviation}`;
-                brandResultDiv.appendChild(brandDiv);
-            });
-        } else {
-            brandResultDiv.textContent = 'No brands found';
-        }
-    });
-
-    // Load All Brands
-    loadBrandsBtn.addEventListener('click', async () => {
-        const response = await fetch(apiUrl);
-        const brands = await response.json();
-
-        allBrandsDiv.innerHTML = '';
-        brands.forEach(brand => {
-            const brandDiv = document.createElement('div');
-            brandDiv.className = 'brand';
-            brandDiv.textContent = `Name: ${brand.name}, Country: ${brand.country}, Abbreviation: ${brand.abbreviation}`;
-            allBrandsDiv.appendChild(brandDiv);
-        });
-    });
+    const editForm = document.getElementById('edit-form');
+    editForm.addEventListener('submit', editBrand);
 });
+
+function fetchBrands() {
+    fetch(baseUrl)
+        .then(response => response.json())
+        .then(data => {
+            const brandList = document.getElementById('brand-list');
+            brandList.innerHTML = data.map(brand => `
+                <div>
+                    <strong>${brand.abbreviation}</strong> - ${brand.name} (${brand.country})
+                </div>
+            `).join('');
+        });
+}
+
+function addBrand(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const country = document.getElementById('country').value;
+    const abbreviation = document.getElementById('abbreviation').value;
+
+    fetch(baseUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, country, abbreviation })
+    })
+        .then(response => response.json())
+        .then(() => {
+            fetchBrands();
+            event.target.reset();
+        });
+}
+
+function deleteBrand(event) {
+    event.preventDefault();
+
+    const abbreviation = document.getElementById('delete-abbreviation').value;
+
+    fetch(`${baseUrl}/${abbreviation}`, {
+        method: 'DELETE'
+    })
+        .then(() => {
+            fetchBrands();
+            event.target.reset();
+        });
+}
+
+function editBrand(event) {
+    event.preventDefault();
+
+    const abbreviation = document.getElementById('edit-abbreviation').value;
+    const name = document.getElementById('edit-name').value;
+    const country = document.getElementById('edit-country').value;
+
+    fetch(`${baseUrl}/${abbreviation}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, country, abbreviation })
+    })
+        .then(response => response.json())
+        .then(() => {
+            fetchBrands();
+            event.target.reset();
+        });
+}
