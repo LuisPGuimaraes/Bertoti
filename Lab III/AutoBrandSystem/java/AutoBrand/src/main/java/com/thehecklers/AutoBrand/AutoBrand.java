@@ -6,13 +6,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @SpringBootApplication
 public class AutoBrand {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		SpringApplication.run(AutoBrand.class, args);
 	}
 
@@ -25,11 +23,11 @@ class RestApiDemoController {
 
 	public RestApiDemoController() {
 		carBrands.addAll(List.of(
-				new CarBrand("General Motors","Estados Unidos","GM"),
-				new CarBrand("Volkswagen","Alemanha","VW"),
-				new CarBrand("Aston Martin","Reino Unido","AM"),
-				new CarBrand("Rolls Royce","Reino Unido","RR"),
-				new CarBrand("Maserati","Italia","MT")));
+				new CarBrand("General Motors", "Estados Unidos", "GM"),
+				new CarBrand("Volkswagen", "Alemanha", "VW"),
+				new CarBrand("Aston Martin", "Reino Unido", "AM"),
+				new CarBrand("Rolls Royce", "Reino Unido", "RR"),
+				new CarBrand("Maserati", "Italia", "MT")));
 	}
 
 	@GetMapping
@@ -38,9 +36,15 @@ class RestApiDemoController {
 	}
 
 	@GetMapping("/{abbreviation}")
-	List<CarBrand> getAbbreviation(){
-        return carBrands;
-    };
+	List<CarBrand> getAbbreviation(@PathVariable String abbreviation){
+		List<CarBrand> result = new ArrayList<>();
+		for (CarBrand carBrand : carBrands) {
+			if (carBrand.getAbbreviation().equalsIgnoreCase(abbreviation)) {
+				result.add(carBrand);
+			}
+		}
+		return result;
+	}
 
 	@PostMapping
 	CarBrand postBrand(@RequestBody CarBrand carBrand) {
@@ -50,6 +54,19 @@ class RestApiDemoController {
 
 	@DeleteMapping("/{abbreviation}")
 	void deleteBrand(@PathVariable String abbreviation) {
-		this.carBrands.removeIf(c -> c.getAbbreviation().equals(abbreviation));
+		this.carBrands.removeIf(c -> c.getAbbreviation().equalsIgnoreCase(abbreviation));
+	}
+
+	@PutMapping("/{abbreviation}")
+	CarBrand putBrand(@PathVariable String abbreviation, @RequestBody CarBrand updatedCarBrand) {
+		for (CarBrand carBrand : carBrands) {
+			if (carBrand.getAbbreviation().equalsIgnoreCase(abbreviation)) {
+				carBrand.setName(updatedCarBrand.getName());
+				carBrand.setCountry(updatedCarBrand.getCountry());
+				carBrand.setAbbreviation(updatedCarBrand.getAbbreviation());
+				return carBrand;
+			}
+		}
+		return null;
 	}
 }
