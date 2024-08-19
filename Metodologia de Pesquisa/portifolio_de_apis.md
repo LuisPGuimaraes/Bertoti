@@ -34,8 +34,23 @@ Primeiro um breve resumo
 </details>
 
 <details>
-  <summary> olhar o jira para ver as tasks 
+  <summary> Criação do sistema de login - Backend </summary>
 
+  Realizei a criação do backend da tela de login, relacionando o usuário e senha com o banco, sendo parte da lógica verificar qual o nível do usuário para direcionar para a home correta
+</details>
+
+<details>
+  <summary> Implementação do local storage em toda a aplicação </summary>
+
+  Devido as dificuldades encaradas durante o desenvolvimento, verificamos a possibilidade de passar algumas informações como usuário e permissão através do local storage para simplificação do código
+
+  
+</details>
+
+<details>
+  <summary> Padronização dos Headers das páginas e tela de login - Frontend </summary>
+
+  Tornei as telas padronizadas criando uma única forma de header contendo toda as informações combinadas com o cliente, fazendo todas as conexões ao banco.
   
 </details>
 
