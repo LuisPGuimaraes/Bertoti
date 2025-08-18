@@ -1,3 +1,6 @@
 [submodule "Metodologia de Pesquisa/API_3SEM"]
 	path = Metodologia de Pesquisa/API_3SEM
 	url = https://github.com/LuisPGuimaraes/API_3SEM
+[submodule "metodologia/API_3SEM"]
+	path = metodologia/API_3SEM
+	url = https://github.com/LuisPGuimaraes/API_3SEM
