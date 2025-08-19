@@ -2,7 +2,7 @@
 <img width="1584" height="396" alt="image" src="https://github.com/user-attachments/assets/e68cd547-da4d-4f59-8e22-77f9fee8a980" />
 
 
-## Descrição
+### Descrição
 
 O projeto desenvolvido pela equipe TechHorizon tem como objetivo otimizar e simplificar o processo de configuração de fontes de dados na plataforma da Dom Rock, que trabalha com um pipeline de processamento de dados encadeados em múltiplos estágios (Landing Zone, Bronze e Silver).
 
@@ -25,3 +25,20 @@ Entre as principais funcionalidades implementadas estão:
   * Exportação de arquivos YAML para integração com outros sistemas.
 
 O projeto foi desenvolvido de forma incremental ao longo de quatro sprints, seguindo práticas ágeis, e contemplou desde a carga inicial de dados até a geração de dashboards e exportações finais. Além disso, foram definidos requisitos não funcionais importantes, como autenticação e autorização de usuários, modelagem de banco de dados voltada à exportação de configurações e um design de front-end.
+
+### Tecnologias Utilizadas
+<img width="1584" height="396" alt="image" src="https://github.com/user-attachments/assets/cf9e5191-fed5-49e2-b330-71d88d047618" />
+
+#### Front-end
+- **HTML:** Estruturação das páginas e organização dos elementos visuais da interface.
+- **CSS:** Responsável pela aparência, estilos e layout da aplicação, garantindo usabilidade.
+- **JavaScript:** Permite interatividade e dinamismo na interface, tornando a experiência do usuário mais fluida.
+
+#### Back-end
+- **Java 8:** Linguagem base utilizada para implementar a lógica do sistema.
+- **Java Development Kit (JDK) 21:** Fornece o ambiente de desenvolvimento atualizado, com ferramentas e bibliotecas para compilar e executar o código Java.
+- **Spring Boot:** Framework que facilita a criação e configuração da aplicação back-end, agilizando o desenvolvimento.
+- **Spring JPA:** Simplifica a persistência e manipulação de dados no banco, garantindo acesso eficiente às informações.
+- **Spring Security:** Responsável por autenticação e controle de acesso, garantindo a segurança da aplicação.
+- **JWT (JSON Web Tokens):** Mecanismo de autenticação baseado em tokens, utilizado para validar sessões de usuários de forma segura.
+
