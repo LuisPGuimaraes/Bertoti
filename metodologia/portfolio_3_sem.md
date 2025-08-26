@@ -42,3 +42,6 @@ O projeto foi desenvolvido de forma incremental ao longo de quatro sprints, segu
 - **Spring Security:** Responsável por autenticação e controle de acesso, garantindo a segurança da aplicação.
 - **JWT (JSON Web Tokens):** Mecanismo de autenticação baseado em tokens, utilizado para validar sessões de usuários de forma segura.
 
+### Principais contribuições 
+
+
