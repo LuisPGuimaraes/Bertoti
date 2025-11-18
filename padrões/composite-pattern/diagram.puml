@@ -1,0 +1,13 @@
+@startuml
+abstract class MenuComponent {
+  + render(indent)
+}
+class MenuItem
+class MenuGroup {
+  - List<MenuComponent> children
+  + add(child)
+}
+MenuComponent <|-- MenuItem
+MenuComponent <|-- MenuGroup
+MenuGroup --> MenuComponent : contains
+@enduml
