@@ -1,0 +1,17 @@
+@startuml
+class Checkout {
+  - PaymentStrategy strategy
+  + setStrategy(strategy)
+  + finishOrder(value)
+}
+interface PaymentStrategy {
+  + process(value)
+}
+class CreditCardStrategy
+class PixStrategy
+class CryptoStrategy
+PaymentStrategy <|.. CreditCardStrategy
+PaymentStrategy <|.. PixStrategy
+PaymentStrategy <|.. CryptoStrategy
+Checkout --> PaymentStrategy
+@enduml
