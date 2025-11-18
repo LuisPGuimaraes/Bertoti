@@ -1,0 +1,10 @@
+@startuml
+class ConditionalPaymentProcessor {
+  + pay(method, value)
+}
+class CheckoutFacade {
+  - ConditionalPaymentProcessor legacy
+  + pay(method, value)
+}
+CheckoutFacade --> ConditionalPaymentProcessor : delega
+@enduml
