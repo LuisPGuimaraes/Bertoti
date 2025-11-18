@@ -1,0 +1,12 @@
+@startuml
+class MegaMenuBuilder {
+  - List<String> level1
+  - List<String> level2
+  - List<String> level3
+  + addLevel1(label)
+  + addLevel2(label)
+  + addLevel3(label)
+  + render()
+}
+MegaMenuBuilder ..> "listas fixas" : responsabilidade acumulada
+@enduml
