@@ -1,0 +1,16 @@
+@startuml
+class LegacyNewsDatabase {
+  + save(headline)
+  + fetchLatestHeadline()
+}
+class DashboardClient {
+  - LegacyNewsDatabase database
+  + refreshLoop()
+}
+class MobileClient {
+  - LegacyNewsDatabase database
+  + refreshLoop()
+}
+DashboardClient --> LegacyNewsDatabase : polling
+MobileClient --> LegacyNewsDatabase : polling
+@enduml
