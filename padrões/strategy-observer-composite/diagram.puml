@@ -1,0 +1,41 @@
+@startuml
+interface DeliveryStrategy {
+  + deliver(audience, message)
+  + channel()
+}
+class EmailStrategy
+class SmsStrategy
+DeliveryStrategy <|.. EmailStrategy
+DeliveryStrategy <|.. SmsStrategy
+
+interface DeliveryObserver {
+  + onDelivered(channel, audience, message)
+}
+class AnalyticsListener
+class AuditListener
+DeliveryObserver <|.. AnalyticsListener
+DeliveryObserver <|.. AuditListener
+
+abstract class NotificationNode {
+  + dispatch(engine)
+}
+class NotificationLeaf
+class NotificationGroup {
+  - List<NotificationNode> children
+}
+NotificationNode <|-- NotificationLeaf
+NotificationNode <|-- NotificationGroup
+NotificationGroup --> NotificationNode
+
+class NotificationEngine {
+  - DeliveryStrategy strategy
+  - List<DeliveryObserver> observers
+  + setStrategy(strategy)
+  + attach(observer)
+  + send(node)
+  + emit(audience, message)
+}
+NotificationEngine --> DeliveryStrategy
+NotificationEngine --> DeliveryObserver
+NotificationEngine --> NotificationNode
+@enduml
