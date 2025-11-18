@@ -1,0 +1,16 @@
+@startuml
+interface Observer {
+  + update(price)
+}
+class MobileDisplay
+class AuditLog
+class StockTicker {
+  - List<Observer> observers
+  + attach(observer)
+  + detach(observer)
+  + setPrice(value)
+}
+Observer <|.. MobileDisplay
+Observer <|.. AuditLog
+StockTicker --> Observer : notifica
+@enduml
